@@ -6,6 +6,8 @@ export default function App() {
   const [number, setNumber] = useState(2);
   return (
     <View style={styles.container}>
+      <Text style={{ ...styles.text, color: "blue" }}>리액트 네이티브</Text>
+      <Text style={styles.text}>리액트 네이티브</Text>
       <Text style={{ fontSize: 50 }}>결과 : {number}</Text>
       <View style={{ flexDirection: "row", gap: 10 }}>
         <Button title="더하기" onPress={() => setNumber(number + 1)} />
@@ -22,5 +24,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#fcfcfc",
     alignItems: "center",
     justifyContent: "center",
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "red",
   },
 });
